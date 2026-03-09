@@ -11,6 +11,8 @@ function loadComponent(id, url) {
 }
 
 window.onload = () => {
-    loadComponent("header-placeholder", "../components/header.html");
-    loadComponent("footer-placeholder", "../components/footer.html");
+    const prefix = window.location.pathname.includes("/pages/") ? "../" : "./";
+    
+    loadComponent("header-placeholder", `${prefix}components/header.html`);
+    loadComponent("footer-placeholder", `${prefix}components/header.html`);
 };
